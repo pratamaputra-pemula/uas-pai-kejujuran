@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UAS PAI: Pendidikan & Pembelajaran Nilai Kejujuran dalam Islam — Wijang Pratama Putra</title>
+    <title>UAS PAI: Pendidikan & Pembelajaran Nilai Kejujuran dalam Perspektif Islam Modern — Wijang Pratama Putra</title>
     
+    <!-- Google Fonts: Playfair Display (Aesthetic Editorial) & Inter (Clean UI Text) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -43,19 +45,19 @@
 
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* --- 2. NAVBAR RESPONSIF --- */
+        /* --- 2. NAVBAR RESPONSIF (PERBAIKAN MOBILE VIEW) --- */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(250, 249, 245, 0.95);
-            backdrop-filter: blur(8px);
+            background-color: rgba(250, 249, 245, 0.97);
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-soft);
             z-index: 1000;
         }
@@ -69,25 +71,26 @@
 
         .nav-logo {
             font-family: 'Playfair Display', serif;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--forest-green);
             text-decoration: none;
+            white-space: nowrap;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 24px;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--charcoal);
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             transition: all 0.3s ease;
         }
 
@@ -97,13 +100,13 @@
 
         /* --- 3. LAYOUT GLOBAL PER LAYER --- */
         section, header {
-            padding: 140px 0;
+            padding: 120px 0;
             border-bottom: 1px solid var(--border-soft);
         }
 
         /* LAYER 1: HERO & INTEGRATED STUDENT ID */
         header.hero-layer {
-            padding-top: 200px;
+            padding-top: 160px;
             background-color: var(--cream-light);
         }
 
@@ -119,52 +122,51 @@
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 54px;
+            font-size: 48px;
             font-weight: 400;
-            line-height: 1.2;
+            line-height: 1.25;
             color: var(--forest-green);
             max-width: 900px;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
         }
 
         .profile-card {
             background-color: var(--cream-dark);
             border: 1px solid var(--border-soft);
-            padding: 40px;
+            padding: 35px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
             margin-top: 40px;
-            position: relative;
         }
 
         .profile-item h5 {
             font-size: 10px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: var(--sage);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .profile-item p {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
         }
 
         .btn-email {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background-color: var(--forest-green);
             color: white;
             text-decoration: none;
-            padding: 12px 20px;
-            font-size: 12px;
+            padding: 10px 16px;
+            font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: background 0.3s ease;
-            margin-top: 10px;
+            margin-top: 6px;
             width: fit-content;
         }
 
@@ -179,40 +181,42 @@
 
         .section-num {
             font-family: 'Playfair Display', serif;
-            font-size: 16px;
+            font-size: 15px;
             font-style: italic;
             color: var(--accent-gold);
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 36px;
+            font-size: 32px;
             color: var(--forest-green);
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             font-weight: 400;
         }
 
         .editorial-grid {
             display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 60px;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 50px;
         }
 
-        .editorial-quote {
+        .sticky-statement {
             font-family: 'Playfair Display', serif;
-            font-size: 26px;
+            font-size: 24px;
             line-height: 1.4;
             color: var(--forest-green);
             font-style: italic;
             border-left: 3px solid var(--sage);
-            padding-left: 25px;
+            padding-left: 20px;
+            position: sticky;
+            top: 110px;
         }
 
         .editorial-text p {
-            margin-bottom: 25px;
-            font-size: 16px;
+            margin-bottom: 20px;
+            font-size: 15.5px;
             text-align: justify;
             color: var(--charcoal);
         }
@@ -225,30 +229,30 @@
         .dalil-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 30px;
         }
 
         .dalil-card {
             background-color: var(--cream-dark);
             border: 1px solid var(--border-soft);
-            padding: 45px;
+            padding: 35px;
         }
 
         .arabic-text {
             font-family: 'Playfair Display', serif;
-            font-size: 32px;
+            font-size: 28px;
             text-align: right;
             direction: rtl;
             line-height: 2;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: var(--forest-green);
         }
 
         .translation {
             font-family: 'Playfair Display', serif;
-            font-size: 17px;
+            font-size: 16px;
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .reference {
@@ -266,14 +270,14 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .feature-card {
             background-color: var(--cream-light);
             border: 1px solid var(--border-soft);
-            padding: 40px;
+            padding: 35px;
             transition: all 0.3s ease;
         }
 
@@ -283,15 +287,15 @@
         }
 
         .feature-icon {
-            font-size: 30px;
+            font-size: 26px;
             color: var(--accent-gold);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .feature-card h4 {
             font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            margin-bottom: 15px;
+            font-size: 20px;
+            margin-bottom: 12px;
             color: var(--forest-green);
         }
 
@@ -301,14 +305,14 @@
             text-align: justify;
         }
 
-        /* LAYER 5: METODOLOGI & STUDI KASUS KRITIS */
+        /* LAYER 5: METODOLOGI & STRATEGI KRITIS */
         .layer-case-study {
             background-color: var(--cream-light);
         }
 
         .accordion-item {
             border-top: 1px solid var(--border-soft);
-            padding: 30px 0;
+            padding: 25px 0;
         }
 
         .accordion-item:last-child {
@@ -317,18 +321,18 @@
 
         .accordion-header {
             display: grid;
-            grid-template-columns: 0.5fr 1.5fr;
+            grid-template-columns: 0.4fr 1.6fr;
             gap: 20px;
         }
 
         .accordion-header h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 22px;
+            font-size: 20px;
             color: var(--forest-green);
         }
 
         .accordion-body p {
-            font-size: 15px;
+            font-size: 14.5px;
             color: var(--charcoal);
             text-align: justify;
         }
@@ -337,30 +341,30 @@
         footer {
             background-color: var(--forest-green);
             color: var(--cream-light);
-            padding: 100px 0 50px 0;
+            padding: 80px 0 40px 0;
             text-align: center;
         }
 
         .footer-logo {
             font-family: 'Playfair Display', serif;
-            font-size: 32px;
+            font-size: 28px;
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .footer-quote {
             max-width: 700px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 30px auto;
             font-family: 'Playfair Display', serif;
-            font-size: 18px;
+            font-size: 16px;
             color: rgba(250, 249, 245, 0.8);
         }
 
         .footer-line {
-            width: 50px;
+            width: 40px;
             height: 1px;
             background-color: rgba(250, 249, 245, 0.2);
-            margin: 0 auto 30px auto;
+            margin: 0 auto 25px auto;
         }
 
         .footer-credits {
@@ -370,27 +374,54 @@
             color: var(--sage);
         }
 
-        /* --- 5. MEDIA QUERIES (SISTEM FIXING MOBILE RESPONSIVE) --- */
+        /* --- 5. PERBAIKAN SISTEM MOBILE RESPONSIVE (BULLETPROOF NO-BREAK) --- */
         @media (max-width: 992px) {
-            h1 { font-size: 42px; }
-            .editorial-grid { grid-template-columns: 1fr; gap: 40px; }
+            h1 { font-size: 38px; }
+            .editorial-grid { grid-template-columns: 1fr; gap: 30px; }
             .dalil-grid { grid-template-columns: 1fr; }
+            .sticky-statement { position: relative; top: 0; margin-bottom: 15px; }
         }
 
         @media (max-width: 768px) {
-            nav { position: absolute; } /* Ubah navbar di HP agar hemat ruang */
-            .nav-links { display: none; } /* Menyembunyikan menu di HP demi estetika minimalis */
-            section, header { padding: 80px 0; }
-            h1 { font-size: 32px; }
-            .profile-card { grid-template-columns: 1fr; padding: 25px; gap: 20px; }
-            .accordion-header { grid-template-columns: 1fr; gap: 10px; }
-            .dalil-card { padding: 25px; }
-            .arabic-text { font-size: 26px; }
+            nav {
+                position: fixed;
+                height: auto;
+            }
+            .nav-box {
+                flex-direction: column;
+                justify-content: center;
+                height: auto;
+                padding: 12px 0;
+                gap: 10px;
+            }
+            .nav-logo {
+                font-size: 18px;
+            }
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px 16px;
+            }
+            .nav-links a {
+                font-size: 10px;
+                letter-spacing: 0.5px;
+            }
+            header.hero-layer {
+                padding-top: 150px;
+            }
+            section, header { padding: 60px 0; }
+            h1 { font-size: 28px; }
+            .profile-card { grid-template-columns: 1fr; padding: 20px; gap: 15px; }
+            .accordion-header { grid-template-columns: 1fr; gap: 8px; }
+            .dalil-card { padding: 20px; }
+            .arabic-text { font-size: 24px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- NAVIGASI ATAS -->
     <nav>
         <div class="container nav-box">
             <a href="#home" class="nav-logo">WPP. Portfolio</a>
@@ -404,6 +435,7 @@
         </div>
     </nav>
 
+    <!-- LAYER 1: HERO & IDENTITAS INTEGRATIF (ID: home) -->
     <header class="hero-layer" id="home">
         <div class="container">
             <span class="badge-tag">UAS Pendidikan Agama Islam &bull; Digital Repository</span>
@@ -432,6 +464,7 @@
         </div>
     </header>
 
+    <!-- LAYER 2: KAJIAN FILOSOFI DEEP CONTENT (ID: filosofi) -->
     <section class="layer-philosophy" id="filosofi">
         <div class="container">
             <span class="section-num">Studi Kedalaman Nilai</span>
@@ -453,6 +486,7 @@
         </div>
     </section>
 
+    <!-- LAYER 3: ENSIKLOPEDIA DALIL (ID: dalil) -->
     <section class="layer-dalil" id="dalil">
         <div class="container">
             <span class="section-num">Landasan Tekstual</span>
@@ -460,7 +494,7 @@
             <div class="dalil-grid">
                 
                 <div class="dalil-card">
-                    <div class="arabic-text">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَكُونُوا۟ مَعَ ٱلصَّٰدِقِينَ</div>
+                    <div class="arabic-text">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَكُONُوا۟ مَعَ ٱلصَّٰدِقِينَ</div>
                     <div class="translation">
                         "Wahai orang-orang yang beriman! Bertakwalah kepada Allah, dan hendaklah kamu bersama orang-orang yang benar (jujur)."
                     </div>
@@ -470,7 +504,7 @@
                 <div class="dalil-card">
                     <div class="arabic-text">إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ وَإِنَّ الْبِرَّ يَهْدِي إِلَى الْجَنَّةِ</div>
                     <div class="translation">
-                        "Sesungguhnya kejujuran itu akan membimbing pada kebaikan, dan kebaikan itu akan membimbing menuju surga."
+                        "Sesungguhnya kejujuran itu akan membimbing pada kebaikan, and kebaikan itu akan membimbing menuju surga."
                     </div>
                     <div class="reference">— Hadits Shahih Riwayat Al-Bukhari & Muslim</div>
                 </div>
@@ -479,11 +513,12 @@
         </div>
     </section>
 
+    <!-- LAYER 4: ETIKA DUNIA TEKNOLOGI & INFORMATIKA (ID: etika-it) -->
     <section class="layer-it-ethics" id="etika-it">
         <div class="container">
             <span class="section-num">Kontekstualisasi Program Studi</span>
             <h2 class="section-title">03 / Integritas Digital: Kejujuran dalam Perspektif PTIK</h2>
-            <p style="margin-bottom: 50px; max-width: 800px; color: var(--sage); font-weight: 500;">
+            <p style="margin-bottom: 35px; max-width: 800px; color: var(--sage); font-weight: 500;">
                 Sebagai bagian dari civitas akademika Pendidikan Teknik Informatika dan Komputer, implementasi nilai *Siddiq* mengalami perluasan makna di ranah siber dan algoritma:
             </p>
             
@@ -509,6 +544,7 @@
         </div>
     </section>
 
+    <!-- LAYER 5: METODOLOGI & STRATEGI KRITIS (ID: metode) -->
     <section class="layer-case-study" id="metode">
         <div class="container">
             <span class="section-num">Metodologi Instruksional</span>
@@ -545,6 +581,7 @@
         </div>
     </section>
 
+    <!-- PENUTUP / FOOTER REFLEKSI HATI -->
     <footer>
         <div class="container">
             <div class="footer-logo">In Veritate Victoria</div>
