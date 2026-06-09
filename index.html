@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendidikan Nilai Kejujuran dalam Islam - Wijang Pratama Putra</title>
+    
+    <!-- Google Fonts: Playfair Display untuk kesan Editorial/Aesthetic & Inter untuk teks biasa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 1. RESET & CORE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9F8F3; /* Warna krem pucat/aesthetic sesuai contoh gambar */
+            color: #2A2E2B; /* Warna abu-abu gelap/charcoal (bukan hitam pekat agar elegan) */
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* --- 2. LAYOUT 5 LAYER (TOP-DOWN) --- */
+        
+        /* LAYER 1: HERO & IDENTITAS */
+        .layer-hero {
+            padding: 120px 0 90px 0;
+            border-bottom: 1px solid rgba(42, 46, 43, 0.1);
+            position: relative;
+        }
+
+        .editorial-tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #6E7569;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 35px;
+            color: #1B241E; /* Hijau hutan sangat gelap */
+        }
+
+        .student-info-box {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(42, 46, 43, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .info-item {
+            font-size: 13px;
+        }
+
+        .info-label {
+            color: #8C9388;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 10px;
+            margin-bottom: 3px;
+        }
+
+        .info-value {
+            font-weight: 400;
+            color: #2A2E2B;
+        }
+
+        /* LAYER 2: HAKIKAT / PENGERTIAN */
+        .layer-essence {
+            padding: 100px 0;
+            background-color: #F4F3ED; /* Variasi warna layer sedikit lebih hangat */
+            border-bottom: 1px solid rgba(42, 46, 43, 0.1);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            color: #1B241E;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            h1 { font-size: 38px; }
+        }
+
+        .essence-lead {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-style: italic;
+            color: #5E665A;
+            line-height: 1.5;
+        }
+
+        .essence-text p {
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #4A504B;
+            text-align: justify;
+        }
+
+        /* LAYER 3: LANDASAN DALIL */
+        .layer-dalil {
+            padding: 100px 0;
+            border-bottom: 1px solid rgba(42, 46, 43, 0.1);
+            background-color: #F9F8F3;
+        }
+
+        .quote-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .arabic-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+            direction: rtl;
+            line-height: 1.8;
+            color: #1B241E;
+            font-weight: 600;
+        }
+
+        .translation-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-style: italic;
+            color: #3A403B;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .source-tag {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8C9388;
+            font-weight: 500;
+        }
+
+        /* LAYER 4: IMPLEMENTASI / DIMENSI */
+        .layer-implementation {
+            padding: 100px 0;
+            background-color: #F4F3ED;
+            border-bottom: 1px solid rgba(42, 46, 43, 0.1);
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .concept-card {
+            background: transparent;
+            padding: 20px 10px;
+            border-top: 1px solid rgba(42, 46, 43, 0.2);
+        }
+
+        .card-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-style: italic;
+            color: #8C9388;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .concept-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: #1B241E;
+        }
+
+        .concept-card p {
+            font-size: 14px;
+            color: #5E665A;
+        }
+
+        /* LAYER 5: FOOTER & REFLEKSI */
+        .layer-footer {
+            padding: 80px 0 50px 0;
+            background-color: #1B241E; /* Footer gelap elegan untuk penutup yang kuat */
+            color: #E2E5E0;
+            text-align: center;
+        }
+
+        .footer-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            color: #F9F8F3;
+            line-height: 1.5;
+        }
+
+        .footer-divider {
+            width: 60px;
+            height: 1px;
+            background-color: rgba(249, 248, 243, 0.2);
+            margin: 0 auto 30px auto;
+        }
+
+        .copyright {
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: #8A9387;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LAYER 1: HERO & STUDENT IDENTITY -->
+    <header class="layer-hero">
+        <div class="container">
+            <div class="editorial-tag">UAS Pendidikan Agama Islam &bull; Artikel Digital</div>
+            <h1>Pendidikan Pembelajaran<br>Nilai Kejujuran dalam Islam</h1>
+            
+            <div class="student-info-box">
+                <div class="info-item">
+                    <div class="info-label">Mahasiswa</div>
+                    <div class="info-value">Wijang Pratama Putra (Tama)</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Nomor Induk Mahasiswa</div>
+                    <div class="info-value">K3525043</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Kelas / Prodi</div>
+                    <div class="info-value">B / Pend. Teknik Informatika & Komputer</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Institusi</div>
+                    <div class="info-value">Universitas Sebelas Maret</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- LAYER 2: HAKIKAT KEJUJURAN -->
+    <section class="layer-essence">
+        <div class="container">
+            <h2 class="section-title">01 / Hakikat Esensial</h2>
+            <div class="grid-layout">
+                <div class="essence-lead">
+                    "Siddiq bukan sekadar keselarasan ucapan, melainkan harmoni suci antara hati, perkataan, dan kenyataan tindakan."
+                </div>
+                <div class="essence-text">
+                    <p>Dalam khazanah akhlak Islam, kejujuran diistilahkan sebagai <em>Shiddiq</em>. Nilai ini menempati posisi yang sangat fundamental karena ia adalah pilar utama dari seluruh bangunan karakter Islami. Kejujuran menuntut seorang muslim untuk berani memanifestasikan kebenaran dalam setiap sendi kehidupan tanpa dualisme kepribadian.</p>
+                    <p>Pendidikan nilai kejujuran bukan sekadar transfer pengetahuan teoretis mengenai apa yang benar dan apa yang salah, melainkan sebuah proses internalisasi spiritual yang mendalam agar individu merasa senantiasa diawasi oleh Sang Pencipta (Muraqabah).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYER 3: LANDASAN DALIL -->
+    <section class="layer-dalil">
+        <div class="container">
+            <div class="quote-wrapper">
+                <div class="arabic-text">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَكُونُوا۟ mَعَ ٱلصَّٰدِقِينَ</div>
+                <div class="translation-text">
+                    "Wahai orang-orang yang beriman! Bertakwalah kepada Allah, dan hendaklah kamu bersama orang-orang yang benar (jujur)."
+                </div>
+                <div class="source-tag">— Al-Qur'an, Surat At-Taubah: 119</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYER 4: DIMENSI IMPLEMENTASI -->
+    <section class="layer-implementation">
+        <div class="container">
+            <h2 class="section-title">02 / Manifestasi Karakter</h2>
+            <div class="cards-container">
+                <div class="concept-card">
+                    <span class="card-num">I. Dimensi Niat (Hati)</span>
+                    <h3>Shiddiq Al-Qalbi</h3>
+                    <p>Kejujuran tertinggi yang bermula dari keikhlasan batin. Setiap motivasi belajar, berkarya, dan menuntut ilmu didasarkan murni demi mencari ridha Ilahi, bersih dari kepalsuan rida manusia.</p>
+                </div>
+                <div class="concept-card">
+                    <span class="card-num">II. Dimensi Ucapan (Lisan)</span>
+                    <h3>Shiddiq Al-Hadits</h3>
+                    <p>Keteguhan untuk menyampaikan kebenaran fakta lewat lisan. Di era digital, implementasi ini mewujud pada komitmen mutlak menolak penyebaran hoaks dan ujaran manipulatif.</p>
+                </div>
+                <div class="concept-card">
+                    <span class="card-num">III. Dimensi Tindakan (Amal)</span>
+                    <h3>Shiddiq Al-Amal</h3>
+                    <p>Sinergi nyata dalam dunia akademik. Diwujudkan melalui aksi konkret: menolak keras tindakan menyontek saat ujian, menjauhi plagiarisme karya, dan menjunjung tinggi orisinalitas baris kode program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYER 5: REFLEKSI & FOOTER -->
+    <footer class="layer-footer">
+        <div class="container">
+            <div class="footer-quote">
+                "Kejujuran adalah keindahan perisai jiwa yang paling berharga bagi seorang penuntut ilmu."
+            </div>
+            <div class="footer-divider"></div>
+            <div class="copyright">
+                &copy; 2026 Wijang Pratama Putra &bull; K3525043 &bull; Tugas UAS Pendidikan Agama Islam UNS
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
