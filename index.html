@@ -381,6 +381,22 @@
             color: var(--text-muted);
         }
 
+        /* STYLING FOTO EDITORIAL PREMIUM */
+        .editorial-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover; /* Memotong gambar secara proporsional */
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin: 25px 0;
+            filter: grayscale(15%); /* Memberi kesan estetik dan menyatu dengan warna sage */
+            transition: all 0.3s ease;
+        }
+        .editorial-img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.01);
+        }
+        
         /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .nav-links {
@@ -499,7 +515,7 @@
             <span class="layer-tag">Kontekstualisasi Program Studi</span>
             <h2 class="layer-title">03 / Integritas Digital: Kejujuran dalam Perspektif PTIK</h2>
             <p>Sebagai bagian dari civitas akademika Pendidikan Teknik Informatika dan Komputer, implementasi nilai <strong>Siddiq</strong> mengalami perluasan makna di ranah siber dan algoritma:</p>
-            
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200" alt="Cyber Security Minimalist" class="editorial-img">
             <div class="feature-block">
                 <div class="feature-item">
                     <h4>Orisinalitas Kode (Anti-Plagiarisme)</h4>
@@ -561,7 +577,7 @@
         <div class="container reveal-on-scroll">
             <span class="layer-tag">Khazanah Keteladanan Klasik</span>
             <h2 class="layer-title">06 / Fragmen Sejarah: Episteme Kejujuran Radikal</h2>
-            
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200" alt="Islamic Architecture Minimalist" class="editorial-img">
             <div class="feature-block">
                 <div class="feature-item">
                     <h4>Gelar Al-Amin Rasulullah SAW</h4>
