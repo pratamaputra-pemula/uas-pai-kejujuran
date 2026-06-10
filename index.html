@@ -81,13 +81,13 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 24px;
+            gap: 20px;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--charcoal);
-            font-size: 11px;
+            font-size: 10.5px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.2px;
@@ -352,6 +352,73 @@
             text-align: justify;
         }
 
+        /* LAYER 6: ANATOMI PERILAKU DUSTA (NEW) */
+        .layer-kizb-anatomy {
+            background-color: var(--cream-dark);
+        }
+
+        /* LAYER 7: HISTORICAL TELADAN (NEW) */
+        .layer-history {
+            background-color: var(--cream-light);
+        }
+        
+        .timeline-box {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .timeline-card {
+            border-left: 2px solid var(--sage);
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-gold);
+            border-radius: 50%;
+        }
+
+        .timeline-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--forest-green);
+            margin-bottom: 10px;
+        }
+
+        /* LAYER 8: MATRIX EVALUASI (NEW) */
+        .layer-matrix {
+            background-color: var(--cream-dark);
+        }
+
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: var(--cream-light);
+        }
+
+        .matrix-table th, .matrix-table td {
+            padding: 18px;
+            border: 1px solid var(--border-soft);
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .matrix-table th {
+            background-color: var(--forest-green);
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
         /* --- 4. FOOTER & REFLEKSI --- */
         footer {
             background-color: var(--forest-green);
@@ -389,7 +456,7 @@
             color: var(--sage);
         }
 
-        /* --- 5. SEAMLESS ANIMATION SYSTEM (FADE IN & SLIDE UP) --- */
+        /* --- 5. SEAMLESS ANIMATION SYSTEM --- */
         .reveal-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -429,21 +496,22 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 12px 16px;
+                gap: 10px 14px;
             }
             .nav-links a {
-                font-size: 10px;
+                font-size: 9.5px;
                 letter-spacing: 0.5px;
             }
             header.hero-layer {
-                padding-top: 150px;
+                padding-top: 170px;
             }
             section, header { padding: 60px 0; }
-            h1 { font-size: 28px; }
+            h1 { font-size: 26px; }
             .profile-card { grid-template-columns: 1fr; padding: 20px; gap: 15px; }
             .accordion-header { grid-template-columns: 1fr; gap: 8px; }
             .dalil-card { padding: 20px; }
-            .arabic-text { font-size: 24px; }
+            .arabic-text { font-size: 22px; }
+            .matrix-table { display: block; overflow-x: auto; }
         }
     </style>
 </head>
@@ -455,10 +523,13 @@
             <a href="#home" class="nav-logo">WPP. Portfolio</a>
             <ul class="nav-links">
                 <li><a href="#home">Identitas</a></li>
-                <li><a href="#filosofi">Kajian Filosofi</a></li>
-                <li><a href="#dalil">Khasanah Dalil</a></li>
-                <li><a href="#etika-it">Etika Informatika</a></li>
+                <li><a href="#filosofi">Filosofi</a></li>
+                <li><a href="#dalil">Dalil</a></li>
+                <li><a href="#etika-it">Etika IT</a></li>
                 <li><a href="#metode">Metodologi</a></li>
+                <li><a href="#dampak">Dampak</a></li>
+                <li><a href="#teladan">Teladan</a></li>
+                <li><a href="#evaluasi">Evaluasi</a></li>
             </ul>
         </div>
     </nav>
@@ -522,7 +593,7 @@
             <div class="dalil-grid">
                 
                 <div class="dalil-card">
-                    <div class="arabic-text">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَكُونُوا۟ Mَعَ ٱلصَّٰدِقِينَ</div>
+                    <div class="arabic-text">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱtَّقُوا۟ ٱللَّهَ وَكُونُوا۟ مَعَ ٱلصَّٰdِقِينَ</div>
                     <div class="translation">
                         "Wahai orang-orang yang beriman! Bertakwalah kepada Allah, dan hendaklah kamu bersama orang-orang yang benar (jujur)."
                     </div>
@@ -609,6 +680,87 @@
         </div>
     </section>
 
+    <!-- LAYER 6: ANATOMI PERILAKU DUSTA & DAMPAK SISTEMIK (ID: dampak) -->
+    <section class="layer-kizb-anatomy" id="dampak">
+        <div class="container reveal-on-scroll">
+            <span class="section-num">Konsekuensi Teologis & Sosial</span>
+            <h2 class="section-title">05 / Anatomi Kizb (Dusta) & Korupsi Intelektual di Era Digital</h2>
+            <div class="editorial-grid">
+                <div class="editorial-left">
+                    <div class="sticky-statement" style="color: #A34A3B; border-left-color: #A34A3B;">
+                        "Dusta digital bekerja seperti virus jaringan: satu manipulasi data kecil mampu merusak validitas seluruh sistem database sosial."
+                    </div>
+                </div>
+                <div class="editorial-text">
+                    <p>Dalam ekosistem siber masa kini, manifestasi dari sifat <strong>Kizb</strong> (dusta) berkembang secara eksponensial. Jika pada era klasik dusta hanya terbatas pada ucapan lisan, kini dusta mewujud dalam bentuk penyebaran berita palsu (*hoax*), fabrikasi data riset, pencurian identitas, hingga manipulasi algoritma untuk menjatuhkan reputasi pihak lain.</p>
+                    
+                    <p>Pendidikan Islam memandang fenomena ini sebagai bentuk kehancuran sistemik. Rasulullah SAW menegaskan bahwa dusta adalah pintu gerbang menuju kejahatan struktural (*Fujur*). Dalam dunia teknologi, ketiadaan kejujuran akademik melahirkan produk digital yang cacat etika, mengorbankan privasi pengguna demi keuntungan finansial sepihak, serta melahirkan ketidakpercayaan massal di tengah masyarakat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYER 7: HISTORICAL LESSONS (ID: teladan) -->
+    <section class="layer-history" id="teladan">
+        <div class="container reveal-on-scroll">
+            <span class="section-num">Khazanah Keteladanan Klasik</span>
+            <h2 class="section-title">06 / Fragmen Sejarah: Episteme Kejujuran Radikal</h2>
+            
+            <div class="timeline-box">
+                <div class="timeline-card">
+                    <h4>Gelar Al-Amin Rasulullah SAW</h4>
+                    <p>Bahkan jauh sebelum menerima risalah kenabian, Muhammad SAW telah dinobatkan oleh seluruh entitas suku Quraisy dengan gelar <em>Al-Amin</em> (Yang Terpercaya). Kejujuran perdagangan beliau menjadi antitesis dari budaya korup kaum jahiliyah, membuktikan bahwa integritas adalah modal sosial tertinggi.</p>
+                </div>
+
+                <div class="timeline-card">
+                    <h4>Sanksi Sosial Tiga Sahabat (Perang Tabuk)</h4>
+                    <p>Kisah Ka'ab bin Malik yang memilih jujur mengakui kelalaiannya tidak ikut berperang kepada Rasulullah SAW, ketimbang membuat seribu alasan palsu seperti kaum munafik. Meski harus menerima konsekuensi boikot sosial selama 50 hari, kejujurannya berbuah pengampunan langsung yang diabadikan Allah di dalam Al-Qur'an.</p>
+                </div>
+
+                <div class="timeline-card">
+                    <h4>Integritas Gadis Penjual Susu</h4>
+                    <p>Di malam hari pada era kekhalifahan Umar bin Khattab, seorang gadis miskin menolak perintah ibunya untuk mencampur susu dagangan mereka dengan air demi untung berlipat. Ia berkata, <em>"Jika Khalifah Umar tidak melihat kita, Tuhannya Umar pasti melihat kita."</em> Prinsip ini menjadi representasi tertinggi dari internalisasi kesadaran ketuhanan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYER 8: EVALUASI & MATRIKS INTEGRITAS (ID: evaluasi) -->
+    <section class="layer-matrix" id="evaluasi">
+        <div class="container reveal-on-scroll">
+            <span class="section-num">Uji Validitas Personal</span>
+            <h2 class="section-title">07 / Matriks Integritas Digital: Parameter Evaluasi Diri</h2>
+            <p style="margin-bottom: 25px; font-size: 14.5px;">Guna memastikan nilai kejujuran telah terinternalisasi dengan baik, mahasiswa dapat mengukur indikator perilaku siber melalui instrumen evaluasi diri berikut:</p>
+            
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Dimensi Perilaku</th>
+                        <th>Indikator Pelanggaran (Kizb)</th>
+                        <th>Prinsip Solusi Islam (Siddiq)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pengerjaan Tugas & Kode</strong></td>
+                        <td>Menggunakan salinan kode penuh dari GitHub/AI tanpa mencantumkan sumber asli.</td>
+                        <td>Mencantumkan lisensi dan atribusi penulis asli sebagai bentuk amanah ilmiah.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pelaksanaan Ujian</strong></td>
+                        <td>Membuka catatan ilegal atau berkolaborasi tanpa izin selama ujian daring.</td>
+                        <td>Memegang prinsip <em>Muraqabatullah</em> (merasa diawasi Allah) meskipun tanpa pengawas fisik.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pengelolaan Data Riset</strong></td>
+                        <td>Mengubah angka statistik hasil kuesioner agar sesuai dengan hipotesis pribadi.</td>
+                        <td>Menyajikan data apa adanya secara objektif demi menjaga marwah kebenaran akademik.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <!-- PENUTUP / FOOTER REFLEKSI HATI -->
     <footer>
         <div class="container">
@@ -633,7 +785,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // Optional: stop observing once animated to save memory
                         observer.unobserve(entry.target);
                     }
                 });
@@ -663,7 +814,7 @@
                     }
                 });
             }, {
-                threshold: 0.3,
+                threshold: 0.25,
                 rootMargin: "-20% 0px -60% 0px"
             });
 
