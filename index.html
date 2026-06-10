@@ -50,7 +50,7 @@
             padding: 0 24px;
         }
 
-        /* --- 2. NAVBAR RESPONSIF (PERBAIKAN MOBILE VIEW) --- */
+        /* --- 2. NAVBAR RESPONSIF --- */
         nav {
             position: fixed;
             top: 0;
@@ -91,11 +91,25 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.2px;
+            position: relative;
             transition: all 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--sage);
+        /* Efek garis bawah dinamis pada navbar menu */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--sage);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a.active-link::after,
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         /* --- 3. LAYOUT GLOBAL PER LAYER --- */
@@ -284,6 +298,7 @@
         .feature-card:hover {
             transform: translateY(-5px);
             border-color: var(--sage);
+            box-shadow: 0 10px 20px rgba(43, 58, 47, 0.05);
         }
 
         .feature-icon {
@@ -374,7 +389,20 @@
             color: var(--sage);
         }
 
-        /* --- 5. PERBAIKAN SISTEM MOBILE RESPONSIVE (BULLETPROOF NO-BREAK) --- */
+        /* --- 5. SEAMLESS ANIMATION SYSTEM (FADE IN & SLIDE UP) --- */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- 6. MEDIA QUERIES (MOBILE RESPONSIVE SYSTEM) --- */
         @media (max-width: 992px) {
             h1 { font-size: 38px; }
             .editorial-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -437,7 +465,7 @@
 
     <!-- LAYER 1: HERO & IDENTITAS INTEGRATIF (ID: home) -->
     <header class="hero-layer" id="home">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="badge-tag">UAS Pendidikan Agama Islam &bull; Digital Repository</span>
             <h1>Pendidikan & Pembelajaran Nilai Kejujuran dalam Perspektif Islam Modern</h1>
             
@@ -466,7 +494,7 @@
 
     <!-- LAYER 2: KAJIAN FILOSOFI DEEP CONTENT (ID: filosofi) -->
     <section class="layer-philosophy" id="filosofi">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="section-num">Studi Kedalaman Nilai</span>
             <h2 class="section-title">01 / Hakikat Esensial & Dekonstruksi Nilai Kejujuran</h2>
             <div class="editorial-grid">
@@ -488,13 +516,13 @@
 
     <!-- LAYER 3: ENSIKLOPEDIA DALIL (ID: dalil) -->
     <section class="layer-dalil" id="dalil">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="section-num">Landasan Tekstual</span>
             <h2 class="section-title">02 / Khasanah Liturgi: Al-Qur'an dan Sunnah</h2>
             <div class="dalil-grid">
                 
                 <div class="dalil-card">
-                    <div class="arabic-text">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَكُONُوا۟ مَعَ ٱلصَّٰدِقِينَ</div>
+                    <div class="arabic-text">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَكُونُوا۟ Mَعَ ٱلصَّٰدِقِينَ</div>
                     <div class="translation">
                         "Wahai orang-orang yang beriman! Bertakwalah kepada Allah, dan hendaklah kamu bersama orang-orang yang benar (jujur)."
                     </div>
@@ -504,7 +532,7 @@
                 <div class="dalil-card">
                     <div class="arabic-text">إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ وَإِنَّ الْبِرَّ يَهْدِي إِلَى الْجَنَّةِ</div>
                     <div class="translation">
-                        "Sesungguhnya kejujuran itu akan membimbing pada kebaikan, and kebaikan itu akan membimbing menuju surga."
+                        "Sesungguhnya kejujuran itu akan membimbing pada kebaikan, dan kebaikan itu akan membimbing menuju surga."
                     </div>
                     <div class="reference">— Hadits Shahih Riwayat Al-Bukhari & Muslim</div>
                 </div>
@@ -515,7 +543,7 @@
 
     <!-- LAYER 4: ETIKA DUNIA TEKNOLOGI & INFORMATIKA (ID: etika-it) -->
     <section class="layer-it-ethics" id="etika-it">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="section-num">Kontekstualisasi Program Studi</span>
             <h2 class="section-title">03 / Integritas Digital: Kejujuran dalam Perspektif PTIK</h2>
             <p style="margin-bottom: 35px; max-width: 800px; color: var(--sage); font-weight: 500;">
@@ -546,7 +574,7 @@
 
     <!-- LAYER 5: METODOLOGI & STRATEGI KRITIS (ID: metode) -->
     <section class="layer-case-study" id="metode">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="section-num">Metodologi Instruksional</span>
             <h2 class="section-title">04 / Strategi Internalisasi Nilai Pembelajaran</h2>
             
@@ -594,6 +622,56 @@
             </div>
         </div>
     </footer>
+
+    <!-- INTERSECTION OBSERVER SCRIPT FOR SEAMLESS HIGH-END ANIMATIONS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. SCRIPT ANIMASI REVEAL FADE IN SLIDE UP
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: stop observing once animated to save memory
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(element => {
+                revealObserver.observe(element);
+            });
+
+            // 2. SCRIPT AUTOMATIC NAV-LINK HIGHLIGHTING ON SCROLL
+            const sections = document.querySelectorAll('section, header');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const activeId = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active-link');
+                            if (link.getAttribute('href') === `#${activeId}`) {
+                                link.classList.add('active-link');
+                            }
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: "-20% 0px -60% 0px"
+            });
+
+            sections.forEach(section => {
+                navObserver.observe(section);
+            });
+        });
+    </script>
 
 </body>
 </html>
