@@ -125,8 +125,22 @@
             color: var(--text-muted);
             font-size: 0.9rem;
             font-weight: 500;
+            position: relative;
         }
-        .nav-links a:hover {
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after, .nav-links a.active-link::after {
+            width: 100%;
+        }
+        .nav-links a:hover, .nav-links a.active-link {
             color: var(--accent-gold);
         }
 
@@ -334,6 +348,18 @@
             color: var(--primary-green);
         }
 
+        /* --- SEAMLESS SMOOTH REVEAL ON SCROLL ANIMATION --- */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: opacity, transform;
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* FOOTER LAYER */
         footer {
             background-color: var(--bg-alt);
@@ -358,7 +384,7 @@
         /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Sederhana untuk mobile, fokus ke modular file */
+                display: none;
             }
             .hero-title {
                 font-size: 2.2rem;
@@ -403,8 +429,8 @@
     </nav>
 
     <!-- LAYER IDENTITY / HERO -->
-    <section id="home" class="section-layer">
-        <div class="container">
+    <header id="home" class="section-layer">
+        <div class="container reveal-on-scroll">
             <span class="hero-subtitle">UAS Pendidikan Agama Islam • Digital Repository</span>
             <h1 class="hero-title">Pendidikan & Pembelajaran Nilai Kejujuran dalam Perspektif Islam Modern</h1>
             
@@ -427,11 +453,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- LAYER 1: FILOSOFI -->
     <section id="filosofi" class="section-layer">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="layer-tag">Studi Kedalaman Nilai</span>
             <h2 class="layer-title">01 / Hakikat Esensial & Dekonstruksi Nilai Kejujuran</h2>
             
@@ -443,18 +469,18 @@
             
             <p>Pendidikan Islam memandang nilai kejujuran sebagai poros utama <em>Character Building</em>. Tanpa adanya fondasi kejujuran, mentransfer ilmu pengetahuan sebanyak apa pun kepada peserta didik hanya akan melahirkan individu yang cerdas secara kognitif namun cacat secara moral (<em>intellectual corruption</em>). Sifat lawan dari jujur adalah <em>Kizb</em> (dusta) atau kemunafikan, sebuah penyakit mental berbahaya yang secara tegas diperingatkan oleh Rasulullah SAW karena mampu merusak tatanan keadilan sosial.</p>
             
-            <p>Oleh karena itu, penanaman nilai ini di era modern menuntut pendekatan kurikulum yang holistik. Pembelajaran tidak boleh berhenti pada hafalan doktrinal, melainkan harus menyentuh kesadaran batin spiritual yang mendalam (<em>Muraqabatullah</em>), sebuah condition psikologis di mana seorang siswa atau mahasiswa merasa bahwa setiap tindakannya terekam secara absolut oleh Allah SWT.</p>
+            <p>Oleh karena itu, penanaman nilai ini di era modern menuntut pendekatan kurikulum yang holistik. Pembelajaran tidak boleh berhenti pada hafalan doktrinal, melainkan harus menyentuh kesadaran batin spiritual yang mendalam (<em>Muraqabatullah</em>), sebuah kondisi psikologis di mana seorang siswa atau mahasiswa merasa bahwa setiap tindakannya terekam secara absolut oleh Allah SWT.</p>
         </div>
     </section>
 
     <!-- LAYER 2: DALIL -->
     <section id="dalil" class="section-layer">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="layer-tag">Landasan Tekstual</span>
             <h2 class="layer-title">02 / Khasanah Liturgi: Al-Qur'an dan Sunnah</h2>
             
             <div class="liturgi-box">
-                <div class="arabic-text">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَكُونُوا۟ مَعَ ٱلصَّٰدِقِينَ</div>
+                <div class="arabic-text">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَكُونُوا۟ mَعَ ٱلصَّٰdِقِينَ</div>
                 <div class="translation">"Wahai orang-orang yang beriman! Bertakwalah kepada Allah, dan hendaklah kamu bersama orang-orang yang benar (jujur)."</div>
                 <div class="source">— QS. At-Taubah [9]: 119</div>
             </div>
@@ -469,7 +495,7 @@
 
     <!-- LAYER 3: ETIKA IT -->
     <section id="etika-it" class="section-layer">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="layer-tag">Kontekstualisasi Program Studi</span>
             <h2 class="layer-title">03 / Integritas Digital: Kejujuran dalam Perspektif PTIK</h2>
             <p>Sebagai bagian dari civitas akademika Pendidikan Teknik Informatika dan Komputer, implementasi nilai <strong>Siddiq</strong> mengalami perluasan makna di ranah siber dan algoritma:</p>
@@ -493,7 +519,7 @@
 
     <!-- LAYER 4: METODOLOGI -->
     <section id="metode" class="section-layer">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="layer-tag">Metodologi Instruksional</span>
             <h2 class="layer-title">04 / Strategi Internalisasi Nilai Pembelajaran</h2>
             
@@ -516,7 +542,7 @@
 
     <!-- LAYER 5: DAMPAK -->
     <section id="dampak" class="section-layer">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="layer-tag">Konsekuensi Teologis & Sosial</span>
             <h2 class="layer-title">05 / Anatomi Kizb (Dusta) & Korupsi Intelektual di Era Digital</h2>
             
@@ -532,7 +558,7 @@
 
     <!-- LAYER 6: TELADAN -->
     <section id="teladan" class="section-layer">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="layer-tag">Khazanah Keteladanan Klasik</span>
             <h2 class="layer-title">06 / Fragmen Sejarah: Episteme Kejujuran Radikal</h2>
             
@@ -555,7 +581,7 @@
 
     <!-- LAYER 7: EVALUASI -->
     <section id="evaluasi" class="section-layer">
-        <div class="container">
+        <div class="container reveal-on-scroll">
             <span class="layer-tag">Uji Validitas Personal</span>
             <h2 class="layer-title">07 / Matriks Integritas Digital: Parameter Evaluasi Diri</h2>
             <p>Guna memastikan nilai kejujuran telah terinternalisasi dengan baik, mahasiswa dapat mengukur indikator perilaku siber melalui instrumen evaluasi diri berikut:</p>
@@ -606,26 +632,70 @@
 
     <!-- JAVASCRIPT FOR DYNAMIC UTILITIES -->
     <script>
-        // 1. LOGIKA READING PROGRESS BAR
-        window.addEventListener('scroll', () => {
-            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById('progressBar').style.width = scrolled + '%';
-        });
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. LOGIKA READING PROGRESS BAR
+            window.addEventListener('scroll', () => {
+                const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('progressBar').style.width = scrolled + '%';
+            });
 
-        // 2. LOGIKA DARK MODE SWITCHER
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
+            // 2. LOGIKA DARK MODE SWITCHER
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
 
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            
-            if (document.body.classList.contains('dark-mode')) {
-                themeIcon.textContent = '☀️';
-            } else {
-                themeIcon.textContent = '🌙';
-            }
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    themeIcon.textContent = '☀️';
+                } else {
+                    themeIcon.textContent = '🌙';
+                }
+            });
+
+            // 3. RESTORE SEAMLESS REVEAL ON SCROLL ANIMATION (INTERSECTION OBSERVER)
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Matikan observasi setelah elemen muncul agar performa ringan
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -40px 0px"
+            });
+
+            revealElements.forEach(element => {
+                revealObserver.observe(element);
+            });
+
+            // 4. SCRIPT DYNAMIC NAV-LINK HIGHLIGHTING ON SCROLL
+            const sections = document.querySelectorAll('section, header');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const activeId = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active-link');
+                            if (link.getAttribute('href') === `#${activeId}`) {
+                                link.classList.add('active-link');
+                            }
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: "-15% 0px -60% 0px"
+            });
+
+            sections.forEach(section => {
+                navObserver.observe(section);
+            });
         });
     </script>
 </body>
